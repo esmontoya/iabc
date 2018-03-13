@@ -1002,7 +1002,7 @@
               },
               {
                 "image": "@PROJECT_PATH@/assets/images/iabc-class-session-1-2000x1500.jpg",
-                "active": true,
+                "active": false,
                 "showButtons": false,
                 "showText": true,
                 "showTitle": true,
@@ -1016,6 +1016,24 @@
                 "contentAlign": "left",
                 "text": "Be diligent to present yourself approved to God, a worker who does not need to be ashamed, rightly dividing the word of truth. II Tim 2:15 NKVJ",
                 "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" href=\"https://mobirise.com\">FOR MAC</a>"
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/iabc-class-session-plascencia1-1024x768.jpg",
+                "active": true,
+                "showButtons": false,
+                "showText": true,
+                "showTitle": true,
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "customStyle1": "display-1",
+                "customStyle2": "display-5",
+                "customStyle3": "display-4",
+                "title": "IABC",
+                "overlay": true,
+                "contentAlign": "left",
+                "text": "INTERNATIONAL APOSTOLIC BIBLE COLLEGE",
+                "buttons": "<a data-app-btn=\"true\" class=\"btn  btn-primary\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" href=\"https://mobirise.com\">FOR MAC</a>",
+                "overlayOpacity": "0.4"
               }
             ]
           }
