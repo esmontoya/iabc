@@ -31,7 +31,7 @@
     },
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.6.2",
-    "uniqCompNum": 32,
+    "uniqCompNum": 34,
     "versionPublish": "4.6.2",
     "screenshot": "screenshot.png",
     "favicon": "",
@@ -3114,6 +3114,137 @@
           "_once": "menu",
           "_params": {},
           "_anchor": "menu1-s"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor"
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#4284df\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-12\">\n                <h2 class=\"mbr-fonts-style block-title align-center\" data-app-selector=\".block-title\" mbr-theme-style=\"display-2\">INTENSIVE&nbsp;<b>COURSE</b></h2>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "content1-w",
+          "_isUserblock": true,
+          "_cid": "qMdzbcleqL",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value",
+              "& when (@gradientBg)": {
+                "background": "linear-gradient(90deg, @bg-value, @color2)"
+              }
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".card-item": {
+              "display": "flex",
+              "justify-content": "space-between",
+              ".card-icon": {
+                "margin-right": "1rem",
+                "span": {
+                  "font-size": "3rem",
+                  "padding": "0.5rem",
+                  "color": "@iconsBg",
+                  "-webkit-transition": "transform 0.4s cubic-bezier(0.38, 3, 0.57, 1.6)",
+                  "-moz-transition": "transform 0.4s cubic-bezier(0.38, 3, 0.57, 1.6)",
+                  "transition": "transform 0.4s cubic-bezier(0.38, 3, 0.57, 1.6)"
+                }
+              },
+              "&:hover": {
+                ".card-icon span": {
+                  "-webkit-transform": "translate3d(0, -5px, 0)",
+                  "-moz-transform": "translate3d(0, -5px, 0)",
+                  "transform": "translate3d(0, -5px, 0)"
+                }
+              },
+              "@media (min-width: 576px)": {
+                ".card-box": {
+                  "margin-left": "1rem"
+                }
+              }
+            },
+            "@media (max-width: 576px)": {
+              ".card-item": {
+                "padding": "0 0 1rem!important",
+                ".card-icon span": {
+                  "font-size": "3rem"
+                }
+              }
+            },
+            ".card-days": {
+              "background-color": "@cardDaysColor",
+              "border-radius": "5px",
+              ".schedule": {
+                "display": "block",
+                "margin": "0 auto",
+                "padding-left": "0",
+                "list-style": "none",
+                "li": {
+                  "border-top": "1px solid",
+                  "padding-top": "10px",
+                  "&:first-child": {
+                    "border-top": "none"
+                  },
+                  "span": {
+                    "float": "right",
+                    "text-align": "right",
+                    "padding-left": "0.5rem"
+                  },
+                  "&:after": {
+                    "display": "block",
+                    "content": "''",
+                    "clear": "both"
+                  }
+                }
+              }
+            },
+            ".media-cards": {
+              "display": "flex",
+              "flex-wrap": "wrap"
+            },
+            ".mbr-overlay": {
+              "background": "linear-gradient(90deg, @overlayColor, @overlayColor2)"
+            },
+            ".media-container-row": {
+              "img": {
+                "-webkit-transition": "transform 0.4s cubic-bezier(0.38, 3, 0.57, 1.6)",
+                "-moz-transition": "transform 0.4s cubic-bezier(0.38, 3, 0.57, 1.6)",
+                "transition": "transform 0.4s cubic-bezier(0.38, 3, 0.57, 1.6)"
+              },
+              "&:hover img": {
+                "-webkit-transform": "translate3d(0, -5px, 0)",
+                "-moz-transform": "translate3d(0, -5px, 0)",
+                "transform": "translate3d(0, -5px, 0)"
+              }
+            },
+            ".mbr-figure": {
+              "@media (min-width: 992px)": {
+                "padding-left": "4rem"
+              },
+              "@media (max-width: 991px)": {
+                "padding-top": "3rem"
+              }
+            },
+            ".mbr-text": {
+              "text-align": "left"
+            }
+          },
+          "_name": "features18",
+          "_customHTML": "<section class=\"features18\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Content Title\" name=\"showContentTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Content Subtitle\" name=\"showContentSubtitle\" checked>\n        <input type=\"color\" title=\"Icons Background\" name=\"iconsBg\" value=\"#4284df\">\n        <input type=\"color\" title=\"Card Color\" name=\"cardDaysColor\" value=\"#4284df\">\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"2\" selected>2</option>\n            <option value=\"4\">4</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=E0Pa8tYo94U\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"bg.type == 'color'\">\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#21b968\" condition=\"gradientBg&& bg.type=='color'\">\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#0c57bf\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" condition=\"overlay && bg.type !== 'color'\" value=\"#21b968\">\n        \n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"media-content\">\n                <h1 class=\"mbr-section-title align-left pb-3 mbr-fonts-style mbr-light\" mbr-if=\"showTitle\" mbr-theme-style=\"display-5\">\n                    INTENSIVE&nbsp;<b>COURSE</b></h1>\n                <p class=\"mbr-section-subtitle mbr-fonts-style pb-3\" data-app-selector=\".mbr-section-subtitle\" mbr-if=\"showSubtitle\" mbr-theme-style=\"display-7\">SAT, APRIL 14, 2018 - 9:00am - 4:00pm</p>\n                <div class=\"media-cards\">\n                    <div class=\"card-item p-3 col-12 col-md-6 col-lg-6\">\n                        <div class=\"card-icon\">\n                            <span mbr-icon class=\"mbr-iconfont fa-book fa\"></span>\n                        </div>\n                        <div class=\"card-box\">\n                            <h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showContentTitle\" data-app-selector=\".card-title\">\n                                <b>Location:</b></h4>\n                            <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Merced New Life<br>2427 E. Santa Fe Avenue<br>Merced, CA 95340</p>\n                        </div>\n                    </div>\n                    <div class=\"card-item p-3 col-12 col-md-6 col-lg-6\">\n                        <div class=\"card-icon\">\n                            <span mbr-icon class=\"mbr-iconfont fa-pencil fa\"></span>\n                        </div>\n                        <div class=\"card-box\">\n                            <h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showContentTitle\" data-app-selector=\".card-title\">\n                                <b>Items To Bring:</b></h4>\n                            <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                Bible<br>Note Taking materials<br>Forms<br><br></p>\n                        </div>\n                    </div>\n                    <div class=\"card-item p-3 col-12 col-md-6 col-lg-6\" mbr-if=\"cardsAmount > 2\">\n                        <div class=\"card-icon\">\n                            <span mbr-icon class=\"mbri-cash mbr-iconfont\"></span>\n                        </div>\n                        <div class=\"card-box\">\n                            <h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showContentTitle\" data-app-selector=\".card-title\">\n                                <b>Financial Services</b>\n                            </h4>\n                            <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                Sed a pulvinar sapien. Aenean eleifend eget velit quis malesuada.\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"card-item p-3 col-12 col-md-6 col-lg-6\" mbr-if=\"cardsAmount > 2\">\n                        <div class=\"card-icon\">\n                            <span mbr-icon class=\"mbri-briefcase mbr-iconfont\"></span>\n                        </div>\n                        <div class=\"card-box\">\n                            <h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showContentTitle\" data-app-selector=\".card-title\">\n                                <b>Engineering</b>\n                            </h4>\n                            <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                Sed a pulvinar sapien. Aenean eleifend eget velit quis malesuada.\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"mbr-figure col-12 col-md-12 col-lg-4\">\n                <div class=\"p-4 pt-4 card-days\">\n                    <h4 class=\"days-title mbr-fonts-style mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showContentTitle\" data-app-selector=\".days-title\">IABC Of North Central District</h4>\n                    <h5 class=\"days-subtitle mbr-fonts-style mbr-white\" data-app-selector=\".days-subtitle\" mbr-theme-style=\"display-5\" mbr-if=\"showContentSubtitle\">\n                        Shedule/Horario</h5>\n                    <div data-multiline mbr-article>\n                        <ul class=\"schedule pt-4 mbr-white\">\n                            <li class=\"schedule-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".schedule-item\">Begin/Comienzo<span>9.00am</span></li>\n                            <li class=\"schedule-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".schedule-item\">Break/Receso<span>10.15 - 10.30am</span></li>\n                            <li class=\"schedule-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".schedule-item\">Resume<span>10.30am</span></li>\n                            <li class=\"schedule-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".schedule-item\">Lunch<span>12.00 - 12.30pm</span></li>\n                            <li class=\"schedule-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".schedule-item\">Break/Receso<span>1.45 - 2.00pm</span></li>\n                            <li class=\"schedule-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".schedule-item\">Resume<span>2.00pm</span></li>\n                            <li class=\"schedule-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".schedule-item\">Ending/Concl.<span>3.45 - 4.00pm</span></li>\n                        </ul>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "qMdznndvrc",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "features18-x"
         },
         {
           "_styles": {
